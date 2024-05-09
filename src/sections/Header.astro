@@ -1,0 +1,36 @@
+<header>
+    <div class="w-10/12 mx-auto flex justify-between items-center py-5">
+        <a class="text-3xl font-merriweather text-cerise" href="/">Gath<span class="text-white">Session</span>.</a>
+
+        <nav>
+            <ul class="flex items-center gap-1">
+                <li><a class="links" href="#">Home</a></li>
+                <li><a class="links" href="#">Features</a></li>
+                <li><a class="links" href="#">Blog</a></li>
+                <li><a class="links" href="#">Contact</a></li>
+                <li><a class="links" href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    nav{
+        ul{
+            li{
+                a{
+                    @apply relative px-2 h-full text-silver before:content-[''] before:w-1/2 before:h-[2px] before:absolute before:bg-transparent before:top-[120%];
+                }
+
+                a.active{
+                    @apply text-white before:bg-cerise;
+                }
+            }
+        }
+    }
+</style>
+
+<script>
+    const $links = document.querySelectorAll('.links')
+    $links[0].classList.add('active')
+</script>
