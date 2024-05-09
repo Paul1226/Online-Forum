@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'poppins': ['Poppins', 'sans-serif'],
-				'merriweather': ['Merriweather', 'serif'],
+				poppins: ['Poppins', 'sans-serif'],
+				merriweather: ['Merriweather', 'serif'],
 			},
 
 			colors: {
