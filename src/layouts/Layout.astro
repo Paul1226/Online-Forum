@@ -25,7 +25,7 @@ import '@fontsource/merriweather/900.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-charade text-sm text-white font-poppins">
+	<body class="bg-charade text-sm text-white font-poppins min-h-screen relative overflow-hidden">
 		<slot />
 	</body>
 </html>
@@ -34,5 +34,34 @@ import '@fontsource/merriweather/900.css';
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
+	}
+
+	body::before{
+		content: '';
+
+		position: absolute;
+		bottom: -40%;
+		right: -8%;
+		z-index: -10;
+
+		aspect-ratio: 1 / 1;
+		width: 600px;
+
+		border: 1px solid #ABABAB20;
+		border-radius: 500%;
+	}
+	body::after{
+		content: '';
+
+		position: absolute;
+		bottom: -40%;
+		right: -8%;
+		z-index: -10;
+
+		aspect-ratio: 1 / 1;
+		width: 780px;
+
+		border: 1px solid #ABABAB20;
+		border-radius: 500%;
 	}
 </style>
